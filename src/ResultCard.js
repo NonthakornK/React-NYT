@@ -1,7 +1,9 @@
-import { Col, Card, CardColumns } from 'react-bootstrap';
+import { Button, Col, Card, CardColumns } from 'react-bootstrap';
 import React, {useState, useEffect} from 'react';
+import ResultModal from './ResultModal';
 
 function ResultCard({articles}) {
+    const [modalShow, setModalShow] = React.useState(false);
     return (
         <CardColumns>
             {articles && articles.map(article => {
@@ -17,9 +19,15 @@ function ResultCard({articles}) {
                             </Card.Body>
                             <Card.Footer>
                                 <Card.Link href={article.url}>Details</Card.Link>
-                                {/* <Button variant="primary" onClick={this.openModal}>
+                                {/* <Button variant="primary" onClick={() => setModalShow(true)}>
                                     Details
-                                </Button> */}
+                                </Button>
+                                <ResultModal
+                                    detail={article}
+                                    show={modalShow}
+                                    onHide={() => setModalShow(false)}
+                                    ref={node => componentRef.current = node}
+                                /> */}
                             </Card.Footer>
                         </Card>
                     </Col>

@@ -1,7 +1,6 @@
-import { Form, FormControl, Button, Col, Card, CardColumns } from 'react-bootstrap';
+import { Form, FormControl } from 'react-bootstrap';
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import ResultModal from './ResultModal';
 import ResultCard from './ResultCard';
 
 function App() {
@@ -36,6 +35,7 @@ function App() {
         </Form>
       </header>
       <ResultCard articles={filteredData} />
+      
     </div>
   )
 }
