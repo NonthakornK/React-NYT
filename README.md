@@ -2,5 +2,5 @@
  - react-boostrap
  - react-router-dom
 
-## Run Command ##
+## Run Command - use this command in project directory ##
  - 'npm start'
